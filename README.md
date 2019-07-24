@@ -3,6 +3,7 @@
 * Criar/Iniciar containers ``sudo docker-compose up ``
     * Caso o container nunca tenha sido criado, irá ser executado o Dockerfile
     * Precisa estar na pasta do arquivo ``docker-compose.yml`` para executar o comando
+    * Inicia servidor em ``localhost:8056``
 * Ver nomes de containes ativos `` sudo docker ps ``
 * Entrar no bash/terminal do container ``sudo docker exec -it <NAME> bash``
 * Encerrar todos containers ``sudo docker-compose down``
