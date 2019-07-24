@@ -3,15 +3,9 @@
 //  terminal: php /path/to/bootstrap.php
 //  vim/nvim: :!php %
 
-require __DIR__.'/src/People/Person.php';
+require __DIR__ . '/autoload.php';
 
-// Não funciona pois não utiliza o namespace
-// $person = new Person;
-
-// Funciona
 $person = new ErikFig\People\Person;
-
-
 $person->setName("Felipe");
 $person->setAge(23);
 $person->setWeight(80.5);

@@ -1,7 +1,5 @@
 <?php
 
-// Garante que a classe seja única com um "sobrenome"
-// permitindo outras classes de mesmo nome mas com "sobrenomes" diferentes
 namespace ErikFig\People;
 
 class Person
