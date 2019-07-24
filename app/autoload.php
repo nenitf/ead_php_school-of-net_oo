@@ -6,4 +6,3 @@ $autoload = new ErikFig\Autoload;
 $autoload->register();
 
 $autoload->addNamespace('ErikFig', 'src');
-
