@@ -3,9 +3,15 @@
 require __DIR__.'/autoload.php';
 
 $person = new ErikFig\People\Person;
-$person->setName('Erik');
-$person->setAge(32);
-$person->setWeight(80);
+$person->name = 'erik';
+$person->age = 32;
+$person->weight = 80.5;
+
+// Retorna name com a primeira letra maiúscula
+echo($person->name);
+// Erik
+
+echo '<br>';
 
 echo $person;
-// Erik, 32, 80
+// erik, 32, 80.5
