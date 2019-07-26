@@ -2,8 +2,14 @@
 
 namespace ErikFig\People;
 
+
 class Person
 {
+  //Não procurar dentro do mesmo namespace da classe Person
+  // Errado: use ErikFig\GetterSetter;
+  // Certo: use \ErikFig\GetterSetter;
+  use \ErikFig\GetterSetter; // Importa todas funções da trait GetterSetter
+
   private $name;
   private $age;
   private $weight;
@@ -29,41 +35,8 @@ class Person
 
   public function getName()
   {
-    // Regra para ver o nome com a primeira letra maiúscula
     return ucfirst($this->name);
   }
-
-  public function __set($propertie, $value)
-  {
-    // Tenta adivinhar o nome do método
-    // e.g. setName
-    $method = 'set' . ucfirst($propertie);
-
-    // Caso o nome do método exista na classe
-    // chama com o parâmetro
-    // do contrário seta a propriedade
-    if (method_exists($this, $method)) {
-      $this->$method($value);
-    } else {
-      $this->$propertie = $value;
-    }
-  }
-
-  public function __get($propertie)
-  {
-    // Tenta adivinhar o nome do método
-    // e.g. getName
-    $method = 'get' . ucfirst($propertie);
-
-    // Caso o nome do método exista na classe
-    // chama
-    // do contrário retorna a propriedade
-    if (method_exists($this, $method)) {
-      return $this->$method();
-    }
-    return $this->$propertie;
-  }
-
 
   public function __toString() :string
   {
